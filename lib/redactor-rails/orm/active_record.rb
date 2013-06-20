@@ -16,8 +16,6 @@ module RedactorRails
 
               belongs_to :assetable, :polymorphic => true
               belongs_to RedactorRails.devise_user, :dependent => :destroy, :foreign_key => RedactorRails.devise_user_key
-
-              attr_accessible :data, :assetable_type, :assetable_id, :assetable
             end
           end
         end
