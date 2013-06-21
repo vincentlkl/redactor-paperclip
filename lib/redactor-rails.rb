@@ -23,14 +23,6 @@ module RedactorRails
   @@document_file_types = ["pdf", "doc", "docx", "xls", "xlsx", "rtf", "txt"]
 
 
-  def self.picture_model
-    RedactorRails::Picture
-  end
-
-  def self.document_model
-    RedactorRails::Document
-  end
-
   def self.devise_user
     %s(user)
   end
