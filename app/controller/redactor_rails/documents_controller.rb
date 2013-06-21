@@ -1,3 +1,3 @@
-class RedactorRails::DocumentsController < ApplicationController
+class RedactorRails::DocumentsController < RedactorRails::BaseController
 
 end
