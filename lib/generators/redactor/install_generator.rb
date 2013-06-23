@@ -19,7 +19,7 @@ module Redactor
       end
 
       def mount_engine
-        sroute "mount RedactorRails::Engine => '/redactor_rails'"
+        route "mount RedactorRails::Engine => '/redactor_rails'"
       end
 
       def create_models
