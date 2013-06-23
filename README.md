@@ -29,6 +29,14 @@ Or install it yourself as:
 
     $ rake db:migrate
 
+#### ActiveRecord + paperclip
+
+    gem "paperclip"
+
+    $ rails generate redactor:install --backend=paperclip
+
+    $ rake db:migrate
+
 #### Mongoid + carrierwave
     gem "carrierwave"
     gem "carrierwave-mongoid", require: "carrierwave/mongoid"
