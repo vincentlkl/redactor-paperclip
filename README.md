@@ -14,6 +14,10 @@ And then execute:
 
     $ bundle install
 
+Add to application.rb:
+
+    require 'redactor-rails'
+
 ### Now generate models for store uploading files
 
 #### ActiveRecord + carrierwave
