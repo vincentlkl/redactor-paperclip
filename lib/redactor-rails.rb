@@ -31,4 +31,8 @@ module RedactorRails
     @root_path ||= Pathname.new(File.dirname(File.expand_path('../', __FILE__)))
   end
 
+  def self.setup
+    yield self
+  end
+
 end
