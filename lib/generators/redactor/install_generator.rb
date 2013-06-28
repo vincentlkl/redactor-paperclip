@@ -40,6 +40,10 @@ module Redactor
         end
       end
 
+      def create_initializer
+        template "#{orm_dir}/redactor_rails_paperclip.rb", File.join('config/initializers', "redactor_rails_paperclip.rb")
+      end
+
       protected
 
       def redactor_dir
@@ -48,6 +52,10 @@ module Redactor
 
       def generator_dir
         @generator_dir ||= [orm, backend].join('/')
+      end
+
+      def orm_dir
+        @orm_dir ||= [orm].join('/')
       end
 
       def uploaders_dir
