@@ -21,7 +21,6 @@ class RedactorRails::BaseController < ApplicationController
   protected
 
   def controller_model
-    binding.pry
     model_name(self.class.to_s.sub('Controller', '').singularize).constantize
   end
 
