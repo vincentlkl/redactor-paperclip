@@ -21,11 +21,12 @@ class RedactorRails::BaseController < ApplicationController
   protected
 
   def controller_model
+    binding.pry
     model_name(self.class.to_s.sub('Controller', '').singularize).constantize
   end
 
   def model_name(name)
-    name == "Document" ? "Attachment" : name
+    name == "RedactorRails::Document" ? "RedactorRails::Attachment" : name
   end
 
 end
