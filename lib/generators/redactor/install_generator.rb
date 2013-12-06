@@ -23,12 +23,12 @@ module Redactor
       end
 
       def create_models
-        [:asset, :picture, :document].each do |filename|
+        [:asset, :picture, :attachment].each do |filename|
           template "#{generator_dir}/redactor/#{filename}.rb", File.join('app/models', redactor_dir, "#{filename}.rb")
         end
 
         if backend == "carrierwave"
-          [:picture, :document].each do |filename|
+          [:picture, :attachment].each do |filename|
             template "#{uploaders_dir}/uploaders/redactor_rails_#{filename}_uploader.rb", File.join("app/uploaders", "redactor_rails_#{filename}_uploader.rb")
           end
         end
