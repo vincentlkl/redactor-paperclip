@@ -19,16 +19,16 @@ module Redactor
       end
 
       def mount_engine
-        sroute "mount RedactorRails::Engine => '/redactor_rails'"
+        route "mount RedactorRails::Engine => '/redactor_rails'"
       end
 
       def create_models
-        [:asset, :picture, :document].each do |filename|
+        [:asset, :picture, :attachment].each do |filename|
           template "#{generator_dir}/redactor/#{filename}.rb", File.join('app/models', redactor_dir, "#{filename}.rb")
         end
 
         if backend == "carrierwave"
-          [:picture, :document].each do |filename|
+          [:picture, :attachment].each do |filename|
             template "#{uploaders_dir}/uploaders/redactor_rails_#{filename}_uploader.rb", File.join("app/uploaders", "redactor_rails_#{filename}_uploader.rb")
           end
         end
@@ -40,6 +40,10 @@ module Redactor
         end
       end
 
+      def create_initializer
+        template "#{orm_dir}/redactor_rails_paperclip.rb", File.join('config/initializers', "redactor_rails_paperclip.rb")
+      end
+
       protected
 
       def redactor_dir
@@ -48,6 +52,10 @@ module Redactor
 
       def generator_dir
         @generator_dir ||= [orm, backend].join('/')
+      end
+
+      def orm_dir
+        @orm_dir ||= [orm].join('/')
       end
 
       def uploaders_dir

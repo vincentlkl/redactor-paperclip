@@ -18,8 +18,7 @@ platforms :ruby do
   end
 
   group :active_record do
-    gem "carrierwave"
-    gem "mini_magick"
+    gem "paperclip"
   end
 
 end

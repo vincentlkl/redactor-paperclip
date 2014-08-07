@@ -1,5 +1,5 @@
 # encoding: utf-8
-class RedactorRailsDocumentUploader < CarrierWave::Uploader::Base
+class RedactorRailsAttachmentUploader < CarrierWave::Uploader::Base
   include RedactorRails::Backend::CarrierWave
 
   # storage :fog

@@ -2,17 +2,25 @@
 
 The redactor-rails gem integrates the [Redactor](http://redactorjs.com/) editor with the Rails 3.2 asset pipeline.
 
-This gem bundles Redactor version 8.2.2 which is the most recent version as of January 20, 2013. Check [Redactor's changelog](http://imperavi.com/redactor/log/) for further updates.
+This gem bundles Redactor version 9.0.2 which is the most recent version as of June 25, 2013. Check [Redactor's changelog](http://imperavi.com/redactor/log/) for further updates.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'redactor-rails', github: 'sergio1990/redactor-rails'
+
+    gem 'redactor-rails', github: 'xana68/redactor-rails'
 
 And then execute:
 
     $ bundle install
+
+
+
+Add to application.rb:
+
+    require 'redactor-rails'
+
 
 ### Now generate models for store uploading files
 
@@ -22,6 +30,14 @@ And then execute:
     gem "mini_magick"
 
     $ rails generate redactor:install
+
+    $ rake db:migrate
+
+#### ActiveRecord + paperclip
+
+    gem "paperclip"
+
+    $ rails generate redactor:install --backend=paperclip
 
     $ rake db:migrate
 

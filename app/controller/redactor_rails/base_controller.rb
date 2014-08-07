@@ -1,7 +1,7 @@
 class RedactorRails::BaseController < ApplicationController
 
   def index
-    @redactors = controller_model.order :id 
+    @redactors = controller_model.order :id
     render json: @redactors.to_json
   end
 
@@ -21,7 +21,11 @@ class RedactorRails::BaseController < ApplicationController
   protected
 
   def controller_model
-    self.class.to_s.sub('Controller', '').singularize.constantize
+    model_name(self.class.to_s.sub('Controller', '').singularize).constantize
+  end
+
+  def model_name(name)
+    name == "RedactorRails::Document" ? "RedactorRails::Attachment" : name
   end
 
 end
