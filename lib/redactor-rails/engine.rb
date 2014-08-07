@@ -6,5 +6,9 @@ module RedactorRails
         include RedactorRails::Helpers
       end
     end
+
+    initializer "redactor_devise" do |app|
+      ActionController::Base.send :include, RedactorRails::Devise
+    end
   end
 end
