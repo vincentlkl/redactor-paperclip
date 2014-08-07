@@ -1,5 +1,4 @@
-$(document).ready(
-  function(){
+window.init_redactor = function(){
   var csrf_token = $('meta[name=csrf-token]').attr('content');
   var csrf_param = $('meta[name=csrf-param]').attr('content');
   var params;
@@ -10,7 +9,9 @@ $(document).ready(
     { "imageUpload":"/redactor_rails/pictures?" + params,
       "imageGetJson":"/redactor_rails/pictures",
       "path":"/assets/redactor-rails",
-      "css":"style.css"
-    }
+      "css":"style.css"}
   );
-});
+}
+
+$(document).ready( window.init_redactor );
+$(window).bind('page:change', window.init_redactor);
