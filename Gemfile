@@ -2,12 +2,11 @@ source 'https://rubygems.org'
 
 # Specify your gem's dependencies in redactor-rails.gemspec
 gemspec
-gem "rails", "3.2.3"
+gem "rails", "~> 4.0.0"
 
 
 platforms :ruby do
-  gem "sqlite3"
-
+  
   group :development do
     gem "unicorn", "~> 4.0.1"
   end
