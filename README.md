@@ -1,4 +1,4 @@
-# Rails ~> 4.0.0 Integration for Redactor (Devise Edition)
+# Rails ~> 4.0.0 Integration for Redactor (Devise and Paperclip Edition )
 
 The redactor-rails gem integrates the [Redactor](http://redactorjs.com/) editor with the Rails 4 asset pipeline.
 
@@ -24,29 +24,14 @@ Add to application.rb:
 
 ### Now generate models for store uploading files
 
-#### ActiveRecord + carrierwave
-
-    gem "carrierwave"
-    gem "mini_magick"
-
-    $ rails generate redactor:install
-
-    $ rake db:migrate
-
 #### ActiveRecord + paperclip
 
     gem "paperclip"
 
-    $ rails generate redactor:install --backend=paperclip
+    $ rails generate redactor:install --devise --backend=paperclip
 
     $ rake db:migrate
 
-#### Mongoid + carrierwave
-    gem "carrierwave"
-    gem "carrierwave-mongoid", require: "carrierwave/mongoid"
-    gem "mini_magick"
-
-    $ rails generate redactor:install
 
 ### Include the Redactor assets
 
@@ -79,13 +64,7 @@ If You Want To setup a new language in Redactor you should do two things:
 
 In you file `app\assets\redactor-rails\config.js` set option
 
-    "lang":'zh_tw'
-
-and
-
-Add to your layout
-
-    <%= redactor_lang('zh_tw') %>
+    "lang":'fr'
 
 ## Contributing
 
