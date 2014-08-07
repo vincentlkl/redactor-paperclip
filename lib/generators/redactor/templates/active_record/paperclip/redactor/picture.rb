@@ -5,7 +5,7 @@ class RedactorRails::Picture < RedactorRails::Asset
                     styles: { content: '800>', thumb: '118x100#' }
 
   validates_attachment_size :data, less_than: 2.megabytes
-  validates_attachment_presence :data
+  validates_attachment :data, content_type: { content_type: /\Aimage\/.*\Z/ }
 
   def url_content
     url(:content)

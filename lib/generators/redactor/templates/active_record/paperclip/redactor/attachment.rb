@@ -4,7 +4,7 @@ class RedactorRails::Attachment < RedactorRails::Asset
                     path: ":rails_root/public/redactor_rails/attachments/:id/:filename"
 
   validates_attachment_size :data, less_than: 100.megabytes
-  validates_attachment_presence :data
+  validates_attachment :data, content_type: { content_type: /\A*\/.*\Z/ }
 
   def url_content
     url(:content)
