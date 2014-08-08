@@ -12,7 +12,7 @@ RedactorPlugins.fontsize = {
 			dropdown['s' + i] = { title: s + 'px', callback: function() { that.setFontsize(s); } };
 		});
 
-		dropdown['remove'] = { title: 'Remove font size', callback: function() { that.resetFontsize(); } };
+		dropdown['remove'] = { title: this.opts.curLang.remove_font_size, callback: function() { that.resetFontsize(); } };
 
 		this.buttonAdd('fontsize', 'Change font size', false, dropdown);
 	},

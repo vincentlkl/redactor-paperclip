@@ -15,6 +15,7 @@ $.Redactor.opts.langs['fr'] = {
 	header2: 'Titre 2',
 	header3: 'Titre 3',
 	header4: 'Titre 4',
+	header5: 'Titre 5',
 	format: 'Format',
 	bold:  'Gras',
 	italic: 'Italique',
@@ -52,6 +53,7 @@ $.Redactor.opts.langs['fr'] = {
 	image_position: 'Position de l\'image',
 	none: 'aucun',
 	left: 'à gauche',
+	center: 'centré',
 	right: 'à droite',
 	image_web_link: 'lien de l\'image',
 	text: 'Texte',
@@ -72,6 +74,12 @@ $.Redactor.opts.langs['fr'] = {
 	fullscreen: 'Plein écran',
 	deleted: 'Supprimer',
 	none: 'aucun',
-	anchor: 'Ancre'
+	anchor: 'Ancre',
+	link_new_tab: 'Ouvrire dans une nouvelle fenètre',
+	underline: 'Surligné',
+	alignment: 'Alignement',
+	filename: 'Nom (optionnel)',
+	edit: 'Editer',
+	remove_font_size: 'supprimer la taille de police'
 };
 })( jQuery );
