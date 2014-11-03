@@ -75,7 +75,7 @@ $.Redactor.opts.langs['fr'] = {
 	deleted: 'Supprimer',
 	none: 'aucun',
 	anchor: 'Ancre',
-	link_new_tab: 'Ouvrire dans une nouvelle fenètre',
+	link_new_tab: 'Ouvrir dans une nouvelle fenètre',
 	underline: 'Surligné',
 	alignment: 'Alignement',
 	filename: 'Nom (optionnel)',
