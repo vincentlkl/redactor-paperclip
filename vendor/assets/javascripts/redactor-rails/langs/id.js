@@ -6,6 +6,7 @@ $.Redactor.opts.langs['id'] = {
     table: 'Tabel',
     link: 'Tautan',
     link_insert: 'Sisipkan Tautan ...',
+    link_edit: 'Edit link',
     unlink: 'Hapus Tautan',
     formatting: 'Format',
     paragraph: 'Paragraf',
@@ -15,6 +16,7 @@ $.Redactor.opts.langs['id'] = {
     header2: 'Header 2',
     header3: 'Header 3',
     header4: 'Header 4',
+    header5: 'Header 5',
     bold:  'Tebal',
     italic: 'Miring',
     fontcolor: 'Warna Huruf',
@@ -62,6 +64,12 @@ $.Redactor.opts.langs['id'] = {
     horizontalrule: 'Sisipkan garis horizontal',
     fullscreen: 'Layar penuh',
     deleted: 'Coret',
-    anchor: 'Jangkar'
+    anchor: 'Jangkar',
+	link_new_tab: 'Open link in new tab',
+	underline: 'Underline',
+	alignment: 'Alignment',
+	filename: 'Name (optional)',
+	edit: 'Edit',
+	center: 'Center'
 };
 })( jQuery );

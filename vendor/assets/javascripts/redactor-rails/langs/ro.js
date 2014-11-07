@@ -6,6 +6,7 @@ $.Redactor.opts.langs['ro'] = {
 	table: 'Tabel',
 	link: 'Legatura web',
 	link_insert: 'Adauga legatura web...',
+	link_edit: 'Edit link',
 	unlink: 'Elimina legatura web',
 	formatting: 'Formatare',
 	paragraph: 'Paragraf',
@@ -15,6 +16,7 @@ $.Redactor.opts.langs['ro'] = {
 	header2: 'Titlu 2',
 	header3: 'Titlu 3',
 	header4: 'Titlu 4',
+	header5: 'Titlu 5',
 	bold:  'Aldin (Bold)',
 	italic: 'Cursiv (Italic)',
 	fontcolor: 'Culoare font',
@@ -62,6 +64,12 @@ $.Redactor.opts.langs['ro'] = {
 	horizontalrule: 'Adauga rigla orizontala',
 	fullscreen: 'Afisare pe tot ecranul',
 	deleted: 'Taiat (Sters)',
-	anchor: 'Ancora'
+	anchor: 'Ancora',
+	link_new_tab: 'Open link in new tab',
+	underline: 'Underline',
+	alignment: 'Alignment',
+	filename: 'Name (optional)',
+	edit: 'Edit',
+	center: 'Center'
 };
 })( jQuery );

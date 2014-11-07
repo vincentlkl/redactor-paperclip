@@ -10,6 +10,9 @@ class RedactorRails::BaseController < ApplicationController
 
     file = params[:file]
     @redactor.data = RedactorRails::Http.normalize_param(file, request)
+    if current_user.present?
+      @redactor.user_id = current_user.id
+    end
 
     if @redactor.save
       render text: { filelink: @redactor.url }.to_json
