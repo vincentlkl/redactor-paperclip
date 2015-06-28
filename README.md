@@ -9,7 +9,7 @@ This gem bundles Redactor version 9.0.2 which is the most recent version as of J
 Add this line to your application's Gemfile:
 
 
-    gem 'redactor-rails', github: 'xana68/redactor-rails'
+    gem 'redactor-rails', github: 'vincentlkl/redactor-rails'
 
 And then execute:
 
